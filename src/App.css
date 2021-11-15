@@ -1,0 +1,146 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;500;600&display=swap');
+
+*:where(:not(iframe, canvas, img, svg, video):not(svg *)) {
+	all: unset;
+	display: revert;
+}
+
+*,
+*::before,
+*::after {
+	box-sizing: border-box;
+}
+
+ol,
+ul {
+	list-style: none;
+}
+
+img {
+	max-width: 100%;
+}
+
+table {
+	border-collapse: collapse;
+}
+
+textarea {
+	white-space: revert;
+}
+
+html,
+body {
+    font-family: 'Poppins', sans-serif;
+    font-weight: 300;
+	background-color: #111;
+	color: #eee;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-weight: 600;
+}
+strong {
+    font-weight: 500;
+}
+
+.loading-container {
+    display: flex;
+    flex-direction: column;
+}
+.loading {
+    height: 20px;
+    margin-bottom: 5px;
+	background: #222;
+	background-image: linear-gradient(
+		to right,
+		#222 0%,
+		#333 20%,
+		#222 40%,
+		#333 100%
+	);
+	background-repeat: no-repeat;
+	background-size: 800px 104px;
+	display: inline-block;
+	position: relative;
+
+	-webkit-animation-duration: 1s;
+	-webkit-animation-fill-mode: forwards;
+	-webkit-animation-iteration-count: infinite;
+	-webkit-animation-name: placeholderShimmer;
+	-webkit-animation-timing-function: linear;
+
+	animation-duration: 1s;
+	animation-fill-mode: forwards;
+	animation-iteration-count: infinite;
+	animation-name: placeholderShimmer;
+	animation-timing-function: linear;
+}
+.loading.quarter {
+    width: 25%;
+}
+.loading.half {
+    width: 50%;
+}
+.loading.full {
+    width: 100%;
+}
+.loading.end {
+    width: 80%;
+}
+
+@-webkit-keyframes placeholderShimmer {
+	0% {
+		background-position: -468px 0;
+	}
+
+	100% {
+		background-position: 468px 0;
+	}
+}
+
+@keyframes placeholderShimmer {
+	0% {
+		background-position: -468px 0;
+	}
+
+	100% {
+		background-position: 468px 0;
+	}
+}
+
+.resume {
+	margin-top: 20px;
+}
+
+.resume-section {
+	display: flex;
+	flex-direction: row;
+}
+
+.resume-section-title,
+.resume-section-content {
+    padding: 20px 0 10px;
+}
+
+.resume-section-title {
+	width: 100%;
+    max-width: 200px;
+    min-width: 140px;
+	text-align: right;
+	text-transform: lowercase;
+	padding-right: 20px;
+	padding-left: 20px;
+	border-right: 1px solid #555;
+	font-weight: 600;
+}
+
+.resume-section-content {
+    padding-right: 20px;
+    padding-left: 20px;
+	max-width: 600px;
+	min-width: 400px;
+}
+
+.resume-section-content .work, .resume-section-content .edu {
+    margin-bottom: 20px;
+}
