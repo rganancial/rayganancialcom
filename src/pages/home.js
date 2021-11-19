@@ -59,7 +59,7 @@ const Home = () => {
 									a.displayOrder < b.displayOrder ? 1 : -1
 								)
 								.map((work) => (
-									<div key={work.id} className="work">
+									<div key={work.id} className="work slideRight">
 										<strong>{work.name}</strong>
 										<p>
 											{work.title} - {work.startDate} to{" "}
@@ -91,7 +91,7 @@ const Home = () => {
 					<div className="resume-section-content">
 						{education.length ? (
 							education.map((edu) => (
-								<div key={edu.id} className="edu">
+								<div key={edu.id} className="edu slideRight">
 									<strong>{edu.name}</strong>
 									<p>
 										{edu.degree}, {edu.field} -{" "}
@@ -115,7 +115,7 @@ const Home = () => {
 					<div className="resume-section-content">
 						{skills.length ? (
 							skills.map((skill) => (
-								<div key={skill.id} className="skill">
+								<div key={skill.id} className="skill slideRight">
 									{skill.name}
 								</div>
 							))
